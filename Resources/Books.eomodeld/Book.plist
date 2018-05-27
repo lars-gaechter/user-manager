@@ -1,0 +1,21 @@
+{
+    attributes = (
+        {columnName = "E_BOOK"; name = eBook; prototypeName = boolean; }, 
+        {columnName = "HARD_COVER"; name = hardCover; prototypeName = boolean; }, 
+        {allowsNull = N; name = id; prototypeName = id; }, 
+        {columnName = "PAPER_BACK"; name = paperBack; prototypeName = boolean; }, 
+        {
+            columnName = "PUBLISHED_DATE"; 
+            name = publishedDate; 
+            prototypeName = jodaLocalDate; 
+        }, 
+        {columnName = TITLE; name = title; prototypeName = varchar50; }
+    ); 
+    attributesUsedForLocking = (eBook, hardCover, id, paperBack, publishedDate, title); 
+    className = "your.app.eo.Book"; 
+    classProperties = (eBook, hardCover, paperBack, publishedDate, title); 
+    externalName = BOOK; 
+    fetchSpecificationDictionary = {}; 
+    name = Book; 
+    primaryKeyAttributes = (id); 
+}

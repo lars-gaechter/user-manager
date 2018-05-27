@@ -1,0 +1,103 @@
+vollername : WOString {
+	value = vollerName;
+}
+
+abmelden : WOHyperlink {
+	action = abmelden;
+}
+
+angemeldetAls : WOConditional {
+	condition = angemeldet;
+}
+
+benutzerListe : WORepetition {
+	item = benutzerSchleifenVar;
+	list = application.benutzerListe;
+}
+
+benutzername : WOString {
+	value = benutzerSchleifenVar.login;
+}
+
+firstname : WOString {
+	value = benutzerSchleifenVar.vorname;
+}
+
+lastname : WOString {
+	value = benutzerSchleifenVar.name;
+}
+
+bearbeiteBenutzerForm : WOForm {
+	
+}
+
+adminBerechtigung : WOConditional {
+	condition = angemeldeterBenutzer.adminBerechtigung;
+}
+
+keineAdminBerechtigung : WOConditional {
+	condition = angemeldeterBenutzer.adminBerechtigung;
+	negate = true;
+}
+
+bearbeiteAnrede : WOPopUpButton {
+	list = application.anredeListe;
+	item = application.anredeSchleifenVar;
+	displayString = application.anredeSchleifenVar;
+	selection = selektierterBenutzer.anrede;
+}
+
+bearbeiteBenutzer : WOHyperlink {
+	action = editUser;
+}
+
+bearbeiteBenutzername : WOTextField {
+	value = selektierterBenutzer.login;
+}
+
+bearbeitePasswort : WOPasswordField {
+	value = selektierterBenutzer.passwort;
+}
+
+bearbeiteVorname : WOTextField {
+	value = selektierterBenutzer.vorname;
+}
+
+bearbeiteName : WOTextField {
+	value = selektierterBenutzer.name;
+}
+
+bearbeiteAdminBerechtigungJa : WORadioButton {
+	value = true;
+	name = "editAdminRights";
+	selection = selektierterBenutzer.adminBerechtigung;
+}
+
+bearbeiteAdminBerechtigungNein : WORadioButton {
+	value = false;
+	name = "editAdminRights";
+	selection = selektierterBenutzer.adminBerechtigung;
+}
+
+aktualisiereBenutzer : WOSubmitButton {
+	action = aktualisiereBenutzer;
+	value = "Aktualisieren";
+}
+
+hinzufügeBenutzer : WOHyperlink {
+	action = application.hinzufügeBenutzer;
+}
+
+entferneBenutzer : WOSubmitButton {
+	action = entferneBenutzer;
+	value = "Entfernen";
+}
+
+bistDuSelbst : WOConditional {
+	condition = bistDuSelbst;
+}
+
+bistDuNichtSelbst : WOConditional {
+	condition = bistDuSelbst;
+	negate = true;
+}

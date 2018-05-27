@@ -1,0 +1,29 @@
+wrapper : MySuperDuperPageWrapper {
+}
+
+content : WOComponentContent {
+}
+
+bild : WOActiveImage {
+	framework = "app";
+	action = clickOutSide;
+	filename = "img/bild.jpg";
+	imageMapFile = "img/bildMap.txt";
+}
+
+loginForm : WOForm {
+	
+}
+
+benutzername : WOTextField {
+	value = login;
+}
+
+passwort : WOPasswordField {
+	value = passwort;
+}
+
+anmeldenSubmit : WOSubmitButton {
+	action = anmelden;
+	value = "Login";
+}
