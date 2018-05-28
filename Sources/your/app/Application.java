@@ -74,9 +74,15 @@ public class Application extends ERXApplication {
 
 	/**
 	 * Fügt einen neuen leeren Benutzer hinzu
+	 * Prüft nur ob zwei objekte nicht identisch gleich sind, 
+	 * flass ja wird die Aktion nicht ausgeführt
+	 * falss nein wird die Aktion ausgeführt
 	 */
 	public void hinzufügeBenutzer() {
-		benutzerListe.add(new Benutzer("leer", "leer", Anrede.Herr, "leer", "leer", false));
+		Benutzer u = new Benutzer("leer", "leer", Anrede.Herr, "leer", "leer", false);
+		if (!benutzerListe.contains(u)) {
+			benutzerListe.add(u);
+		}
 	}
 
 	/**
