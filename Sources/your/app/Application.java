@@ -96,7 +96,7 @@ public class Application extends ERXApplication {
 		while (it.hasNext()) {
 			Benutzer benutzer = it.next();
 
-			if (benutzer.getLogin().equals(benutzername) && benutzer.getPasswort().equals(passwort)) {
+			if (benutzer.getBenutzername().equals(benutzername) && benutzer.getPasswort().equals(passwort)) {
 				UserListPage anmeldungErfolgreich = pageWithName(UserListPage.class);
 				anmeldungErfolgreich.setAngemeldeterBenutzer(benutzer);
 

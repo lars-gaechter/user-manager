@@ -16,14 +16,14 @@ benutzerListe : WORepetition {
 }
 
 benutzername : WOString {
-	value = benutzerSchleifenVar.login;
+	value = benutzerSchleifenVar.benutzername;
 }
 
-firstname : WOString {
+vorname : WOString {
 	value = benutzerSchleifenVar.vorname;
 }
 
-lastname : WOString {
+name : WOString {
 	value = benutzerSchleifenVar.name;
 }
 
@@ -48,11 +48,11 @@ bearbeiteAnrede : WOPopUpButton {
 }
 
 bearbeiteBenutzer : WOHyperlink {
-	action = editUser;
+	action = bearbeiteBenutzer;
 }
 
 bearbeiteBenutzername : WOTextField {
-	value = selektierterBenutzer.login;
+	value = selektierterBenutzer.benutzername;
 }
 
 bearbeitePasswort : WOPasswordField {
@@ -69,13 +69,13 @@ bearbeiteName : WOTextField {
 
 bearbeiteAdminBerechtigungJa : WORadioButton {
 	value = true;
-	name = "editAdminRights";
+	name = "bearbeiteAdminBerechtigung";
 	selection = selektierterBenutzer.adminBerechtigung;
 }
 
 bearbeiteAdminBerechtigungNein : WORadioButton {
 	value = false;
-	name = "editAdminRights";
+	name = "bearbeiteAdminBerechtigung";
 	selection = selektierterBenutzer.adminBerechtigung;
 }
 

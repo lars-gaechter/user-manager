@@ -69,7 +69,7 @@ public class UserListPage extends ERXComponent {
 	}
 
 	public String vollerName() {
-		return angemeldeterBenutzer.getLogin();
+		return angemeldeterBenutzer.getBenutzername();
 	}
 
 	/**
@@ -88,7 +88,7 @@ public class UserListPage extends ERXComponent {
 		application.entferneBenutzer(selektierterBenutzer);
 	}
 
-	public void editUser() {
+	public void bearbeiteBenutzer() {
 		selektierterBenutzer = benutzerSchleifenVar;
 	}
 

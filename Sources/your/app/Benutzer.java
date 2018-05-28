@@ -63,11 +63,11 @@ public class Benutzer {
 		this.anrede = anrede;
 	}
 
-	public String getLogin() {
+	public String getBenutzername() {
 		return benutzername;
 	}
 
-	public void setLogin(String benutzername) {
+	public void setBenutzername(String benutzername) {
 		this.benutzername = benutzername;
 	}
 
