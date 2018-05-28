@@ -22,22 +22,6 @@ public class Main extends BaseComponent {
 
 	}
 
-	public String getLogin() {
-		return benutzername;
-	}
-
-	public void setLogin(String benutzername) {
-		this.benutzername = benutzername;
-	}
-
-	public String getPasswort() {
-		return passwort;
-	}
-
-	public void setPasswort(String passwort) {
-		this.passwort = passwort;
-	}
-
 	public Main clickOutSide() {
 		Main nextPage = pageWithName(Main.class);
 		return nextPage;

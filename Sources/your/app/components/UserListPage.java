@@ -69,7 +69,7 @@ public class UserListPage extends ERXComponent {
 	}
 
 	public String vollerName() {
-		return angemeldeterBenutzer.getBenutzername();
+		return angemeldeterBenutzer.getVorname()+" "+angemeldeterBenutzer.getName();
 	}
 
 	/**

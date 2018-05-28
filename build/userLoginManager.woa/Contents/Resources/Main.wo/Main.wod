@@ -16,7 +16,7 @@ loginForm : WOForm {
 }
 
 benutzername : WOTextField {
-	value = login;
+	value = anmelden;
 }
 
 passwort : WOPasswordField {
@@ -25,5 +25,5 @@ passwort : WOPasswordField {
 
 anmeldenSubmit : WOSubmitButton {
 	action = anmelden;
-	value = "Login";
+	value = "Anmelden";
 }
