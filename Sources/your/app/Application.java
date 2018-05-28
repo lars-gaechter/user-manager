@@ -80,8 +80,10 @@ public class Application extends ERXApplication {
 	}
 
 	/**
-	 * Die eigentliche ANmeldefunktion prüft ob es einen gleichen benutzername mit
+	 * Die eigentliche Anmeldefunktion prüft ob es einen gleichen benutzername mit
 	 * dem Passwort finden kann.
+	 * 
+	 * Hier wird die Funktion deklariert
 	 * 
 	 * @param login
 	 *            Benutzername

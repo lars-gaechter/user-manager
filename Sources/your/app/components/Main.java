@@ -15,7 +15,11 @@ public class Main extends BaseComponent {
 
 		application = (Application) Application.application();
 	}
-
+	/**
+	 * Aufruf der Anmeldefunktion, mehr Details findet man in der Klasse Application
+	 * 
+	 * @return eigegebener benutzername und eingegebenes passwort
+	 */
 	public UserListPage anmelden() {
 
 		return application.anmelden(getBenutzername(), getPasswort());
