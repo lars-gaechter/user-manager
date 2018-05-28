@@ -3,6 +3,7 @@ package your.app.components;
 import com.webobjects.appserver.WOComponent;
 import com.webobjects.appserver.WOContext;
 import er.extensions.components.ERXComponent;
+import your.app.Anrede;
 import your.app.Application;
 import your.app.Benutzer;
 import your.app.Session;
@@ -69,7 +70,7 @@ public class UserListPage extends ERXComponent {
 	}
 
 	public String vollerName() {
-		return angemeldeterBenutzer.getVorname()+" "+angemeldeterBenutzer.getName();
+		return angemeldeterBenutzer.getVorname() + " " + angemeldeterBenutzer.getName();
 	}
 
 	/**
@@ -91,9 +92,24 @@ public class UserListPage extends ERXComponent {
 	public void bearbeiteBenutzer() {
 		selektierterBenutzer = benutzerSchleifenVar;
 	}
-
+	/**
+	 * Funktion müsste überpfüfen ob es ein identischgleiches benutzer objekt ist der Liste gibt
+	 * Wenn ja, wird Benutzer nicht aktualisiert
+	 * Wenn nein, wird die Änderungsaktion ausgeführt
+	 * 
+	 * @return ladet die Seite neu
+	 */
 	public WOComponent aktualisiereBenutzer() {
+		//Benutzer u = null;
+		//u = new Benutzer(u.getName(), u.getVorname(), u.getAnrede(),
+		//		u.getBenutzername(), u.getPasswort(), u.getAdminBerechtigung());
+		//if (!application.getBenutzerListe().contains(u)) {
+		//	return this.context().page();
+		//} else {
+		//	return null;
+		//}
 		return this.context().page();
+		
 	}
 
 	public boolean bistDuSelbst() {
