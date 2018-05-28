@@ -18,8 +18,24 @@ public class Main extends BaseComponent {
 
 	public UserListPage anmelden() {
 
-		return application.anmelden(benutzername, passwort);
+		return application.anmelden(getBenutzername(), getPasswort());
 
+	}
+
+	public String getBenutzername() {
+		return benutzername;
+	}
+
+	public void setBenutzername(String benutzername) {
+		this.benutzername = benutzername;
+	}
+
+	public String getPasswort() {
+		return passwort;
+	}
+
+	public void setPasswort(String passwort) {
+		this.passwort = passwort;
 	}
 
 	public Main clickOutSide() {
