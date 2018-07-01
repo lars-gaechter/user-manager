@@ -97,15 +97,25 @@ public class Main extends BaseComponent {
 		queryBindings = new NSMutableDictionary<String, Object>();
 	}
 	
-	private NSArray<_Benutzer> benutzern;
-	private _Benutzer nameLoopvar;
+	public NSMutableDictionary<String, Object> getQueryBindings() {
+		return queryBindings;
+	}
+
+	public void setQueryBindings(NSMutableDictionary<String, Object> queryBindings) {
+		this.queryBindings = queryBindings;
+	}
+
+	private NSArray<Benutzer> benutzern;
+	private Benutzer benutzernLoopvar;
 	
 	private NSMutableDictionary<String, Object> queryBindings;
 
 	private NSArray<String> loop;
+	
+	
 	public WOComponent reload() {
-		benutzern = _Benutzer.fetchBenutzer(
-				session().defaultEditingContext(), queryBindings);
+		setBenutzern(_Benutzer.fetchBenutzer(
+				session().defaultEditingContext(), queryBindings));
 		return null;
 	}
 	
@@ -165,20 +175,22 @@ public void setLast(String value) {
 		return nextPage;
 	}
 	
-	public NSArray<your.app.eo.Benutzer> test() {
-		
-		EOEditingContext ec = session().defaultEditingContext();
-		your.app.eo.Benutzer benutzer = new your.app.eo.Benutzer();
-		benutzer.setVorname("Lars");
-		ec.insertObject(benutzer);
-		ERXEOControlUtilities.createAndInsertObject(ec, _Benutzer.ENTITY_NAME);
-		ERXFetchSpecification<_Benutzer> fs =
-				new ERXFetchSpecification<_Benutzer>
-				(_Benutzer.ENTITY_NAME, null, null);
-				NSArray<_Benutzer> benutzern =
-						ec.objectsWithFetchSpecification(fs);
-		return benutzer.fetchAllBenutzers(ec);
-		//return "asdasd";
+	
+
+	public Benutzer getBenutzernLoopvar() {
+		return benutzernLoopvar;
+	}
+
+	public void setBenutzernLoopvar(Benutzer benutzernLoopvar) {
+		this.benutzernLoopvar = benutzernLoopvar;
+	}
+
+	public NSArray<Benutzer> getBenutzern() {
+		return benutzern;
+	}
+
+	public void setBenutzern(NSArray<Benutzer> benutzern) {
+		this.benutzern = benutzern;
 	}
 
 }

@@ -34,13 +34,13 @@ form : WOForm {
 }
 
 first : WOTextField {
-	value = datsa;
+	value = queryBindings.first;
 	//queryBindings.first;
 }
 
 
 last : WOTextField {
-	value = fdfs;
+	value = queryBindings.last;
 	//queryBindings.last;
 }
 
@@ -50,16 +50,16 @@ queryDb : WOSubmitButton {
 }
 
 list : WORepetition {
-	list = NSArray<_Benutzer> benutzern;
-	item = _Benutzer nameLoopvar;
+	list = benutzern;
+	item = benutzernLoopvar;
 }
 
 nameFirst : WOString {
-	value = first;
+	value = benutzernLoopvar.first;
 	//nameLoopvar.first;
 }
 nameLast : WOString {
-	value = last;
+	value = benutzernLoopvar.last;
 	//nameLoopvar.last;
 }
 
