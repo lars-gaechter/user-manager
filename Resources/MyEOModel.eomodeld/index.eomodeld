@@ -10,7 +10,6 @@
         {className = "your.app.eo.Anrede"; name = Anrede; }, 
         {className = "your.app.eo.Benutzer"; name = Benutzer; }
     ); 
-    internalInfo = {"_deletedEntityNamesInObjectStore" = (Anrede, Benutzer); }; 
     userInfo = {
         "_EntityModeler" = {
             activeDatabaseConfigName = Default; 

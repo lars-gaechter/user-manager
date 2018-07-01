@@ -1,0 +1,25 @@
+{
+    benutzerByName = {
+        class = EOFetchSpecification; 
+        entityName = Benutzer; 
+        prefetchingRelationshipKeyPaths = (); 
+        qualifier = {
+            class = EOAndQualifier; 
+            qualifiers = (
+                {
+                    class = EOKeyValueQualifier; 
+                    key = vorname; 
+                    selectorName = "isEqualTo:"; 
+                    value = {"_key" = first; class = EOQualifierVariable; }; 
+                }, 
+                {
+                    class = EOKeyValueQualifier; 
+                    key = nachname; 
+                    selectorName = "isEqualTo:"; 
+                    value = {"_key" = last; class = EOQualifierVariable; }; 
+                }
+            ); 
+        }; 
+        sortOrderings = ({class = EOSortOrdering; key = nachname; selectorName = ascending; }); 
+    }; 
+}

@@ -57,7 +57,6 @@
     className = "your.app.eo.Benutzer"; 
     classProperties = (anrede, benutzername, nachname, passwort, vorname); 
     externalName = benutzer; 
-    fetchSpecificationDictionary = {}; 
     name = Benutzer; 
     primaryKeyAttributes = (anredeId, id); 
     relationships = (

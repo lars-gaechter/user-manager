@@ -105,8 +105,8 @@ public class Main extends BaseComponent {
 		this.queryBindings = queryBindings;
 	}
 
-	private NSArray<Benutzer> benutzern;
-	private Benutzer benutzernLoopvar;
+	private NSArray<your.app.eo.Benutzer> benutzern;
+	private your.app.eo.Benutzer benutzernLoopvar;
 	
 	private NSMutableDictionary<String, Object> queryBindings;
 
@@ -114,8 +114,8 @@ public class Main extends BaseComponent {
 	
 	
 	public WOComponent reload() {
-		setBenutzern(_Benutzer.fetchBenutzer(
-				session().defaultEditingContext(), queryBindings));
+		benutzern = your.app.eo.Benutzer.fetchBenutzerByName(
+				session().defaultEditingContext(), queryBindings);
 		return null;
 	}
 	
@@ -177,19 +177,19 @@ public void setLast(String value) {
 	
 	
 
-	public Benutzer getBenutzernLoopvar() {
+	public your.app.eo.Benutzer getBenutzernLoopvar() {
 		return benutzernLoopvar;
 	}
 
-	public void setBenutzernLoopvar(Benutzer benutzernLoopvar) {
+	public void setBenutzernLoopvar(your.app.eo.Benutzer benutzernLoopvar) {
 		this.benutzernLoopvar = benutzernLoopvar;
 	}
 
-	public NSArray<Benutzer> getBenutzern() {
+	public NSArray<your.app.eo.Benutzer> getBenutzern() {
 		return benutzern;
 	}
 
-	public void setBenutzern(NSArray<Benutzer> benutzern) {
+	public void setBenutzern(NSArray<your.app.eo.Benutzer> benutzern) {
 		this.benutzern = benutzern;
 	}
 

@@ -168,4 +168,22 @@ public abstract class _Benutzer extends  ERXGenericRecord {
     }
     return localInstance;
   }
+  public static NSArray<your.app.eo.Benutzer> fetchBenutzerByName(EOEditingContext editingContext, NSDictionary<String, Object> bindings) {
+    EOFetchSpecification fetchSpec = EOFetchSpecification.fetchSpecificationNamed("benutzerByName", _Benutzer.ENTITY_NAME);
+    fetchSpec = fetchSpec.fetchSpecificationWithQualifierBindings(bindings);
+    return (NSArray<your.app.eo.Benutzer>)editingContext.objectsWithFetchSpecification(fetchSpec);
+  }
+
+  public static NSArray<your.app.eo.Benutzer> fetchBenutzerByName(EOEditingContext editingContext,
+  String firstBinding,
+  String lastBinding)
+  {
+    EOFetchSpecification fetchSpec = EOFetchSpecification.fetchSpecificationNamed("benutzerByName", _Benutzer.ENTITY_NAME);
+    NSMutableDictionary<String, Object> bindings = new NSMutableDictionary<String, Object>();
+    bindings.takeValueForKey(firstBinding, "first");
+    bindings.takeValueForKey(lastBinding, "last");
+    fetchSpec = fetchSpec.fetchSpecificationWithQualifierBindings(bindings);
+    return (NSArray<your.app.eo.Benutzer>)editingContext.objectsWithFetchSpecification(fetchSpec);
+  }
+
 }
