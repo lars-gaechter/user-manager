@@ -1,0 +1,37 @@
+{
+    attributes = (
+        {
+            allowsNull = Y; 
+            columnName = anrede; 
+            externalType = VARCHAR; 
+            name = anrede; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 45; 
+        }, 
+        {
+            className = "java.lang.Number"; 
+            columnName = id; 
+            externalType = INT; 
+            name = id; 
+            precision = 10; 
+            valueType = l; 
+        }
+    ); 
+    attributesUsedForLocking = (anrede, id); 
+    className = "your.app.eo.Anrede"; 
+    classProperties = (anrede, benutzers); 
+    externalName = anrede; 
+    fetchSpecificationDictionary = {}; 
+    name = Anrede; 
+    primaryKeyAttributes = (id); 
+    relationships = (
+        {
+            destination = Benutzer; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = anredeId; sourceAttribute = id; }); 
+            name = benutzers; 
+        }
+    ); 
+}

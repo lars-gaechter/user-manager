@@ -1,26 +1,38 @@
-<webobject name = "wrapper">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <meta charset = "UTF-8" />
+    <meta http-equiv = "Content-Type" content = "text/html; charset=utf-8" />
+    <title>Login</title>
+  </head>
+  <body>
+<div style = "width: 100%; height: 100%; background-color: #ccc;">
   <webobject name = "content">
-    <h2>Login</h2>
-    <p>
-      <webobject name = "loginForm">
-        Benutzername: 
-        <webobject name = "benutzername" />
-        Passwort: 
-        <webobject name = "passwort" />
-        <webobject name = "anmeldenSubmit" />
-      </webobject>
-    </p>
-    <webobject name = "bild" />
   </webobject>
-</webobject>
+
 <h2>Login</h2>
-<p>
+
   <webobject name = "loginForm">
     Benutzername: 
     <webobject name = "benutzername" />
+    <br>
     Passwort: 
     <webobject name = "passwort" />
+    <br>
+    
     <webobject name = "anmeldenSubmit" />
+    <br>
   </webobject>
-</p>
-<webobject name = "bild" />
+<webobject name = "form">
+<p><webobject name = "first"></webobject></p>
+<p><webobject name = "last"></webobject></p>
+<p><webobject name = "queryDb"></webobject></p>
+</webobject>
+<ul>
+<webobject name = "list">
+<li><webobject name = "nameFirst"/> <webobject name = "nameLast"/></li>
+</webobject>
+</ul>
+</div>
+  </body>
+</html>

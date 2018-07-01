@@ -1,0 +1,72 @@
+{
+    attributes = (
+        {
+            className = "java.lang.Number"; 
+            columnName = "Anrede_id"; 
+            externalType = INT; 
+            name = anredeId; 
+            precision = 10; 
+            valueType = l; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = benutzername; 
+            externalType = VARCHAR; 
+            name = benutzername; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 45; 
+        }, 
+        {
+            className = "java.lang.Number"; 
+            columnName = id; 
+            externalType = INT; 
+            name = id; 
+            precision = 10; 
+            valueType = l; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = nachname; 
+            externalType = VARCHAR; 
+            name = nachname; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 45; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = passwort; 
+            externalType = VARCHAR; 
+            name = passwort; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 45; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = vorname; 
+            externalType = VARCHAR; 
+            name = vorname; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 45; 
+        }
+    ); 
+    attributesUsedForLocking = (anredeId, benutzername, id, nachname, passwort, vorname); 
+    className = "your.app.eo.Benutzer"; 
+    classProperties = (anrede, benutzername, nachname, passwort, vorname); 
+    externalName = benutzer; 
+    fetchSpecificationDictionary = {}; 
+    name = Benutzer; 
+    primaryKeyAttributes = (anredeId, id); 
+    relationships = (
+        {
+            destination = Anrede; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = id; sourceAttribute = anredeId; }); 
+            name = anrede; 
+        }
+    ); 
+}

@@ -1,0 +1,30 @@
+{
+    EOModelVersion = "2.1"; 
+    adaptorName = JDBC; 
+    connectionDictionary = {
+        URL = "jdbc:mysql://localhost/usermanager"; 
+        password = 1234; 
+        username = root; 
+    }; 
+    entities = (
+        {className = "com.webobjects.eocontrol.EOGenericRecord"; name = Anrede; }, 
+        {className = "com.webobjects.eocontrol.EOGenericRecord"; name = Benutzer; }
+    ); 
+    userInfo = {
+        "_EntityModeler" = {
+            activeDatabaseConfigName = NewDatabaseConfig; 
+            databaseConfigs = {
+                NewDatabaseConfig = {
+                    adaptorName = JDBC; 
+                    connectionDictionary = {
+                        URL = "jdbc:mysql://localhost/usermanager"; 
+                        password = 1234; 
+                        username = root; 
+                    }; 
+                    prototypeEntityName = EOJDBCMySQLPrototypes; 
+                }; 
+            }; 
+            reverseEngineered = Y; 
+        }; 
+    }; 
+}

@@ -15,6 +15,7 @@ loginForm : WOForm {
 	
 }
 
+
 benutzername : WOTextField {
 	value = benutzername;
 }
@@ -27,3 +28,38 @@ anmeldenSubmit : WOSubmitButton {
 	action = anmelden;
 	value = "Anmelden";
 }
+
+form : WOForm {
+	multipleSubmit = true;
+}
+
+first : WOTextField {
+	value = datsa;
+	//queryBindings.first;
+}
+
+
+last : WOTextField {
+	value = fdfs;
+	//queryBindings.last;
+}
+
+queryDb : WOSubmitButton {
+	value = "Query";
+	action = reload;
+}
+
+list : WORepetition {
+	list = NSArray<_Benutzer> benutzern;
+	item = _Benutzer nameLoopvar;
+}
+
+nameFirst : WOString {
+	value = first;
+	//nameLoopvar.first;
+}
+nameLast : WOString {
+	value = last;
+	//nameLoopvar.last;
+}
+

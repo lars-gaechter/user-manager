@@ -1,0 +1,29 @@
+{
+    attributes = (
+        {columnName = anrede; name = anrede; prototypeName = varchar100; }, 
+        {
+            className = "java.lang.Number"; 
+            columnName = id; 
+            externalType = INT; 
+            name = id; 
+            precision = 10; 
+            valueType = l; 
+        }
+    ); 
+    attributesUsedForLocking = (anrede, id); 
+    className = "com.webobjects.eocontrol.EOGenericRecord"; 
+    classProperties = (anrede, benutzers); 
+    externalName = anrede; 
+    fetchSpecificationDictionary = {}; 
+    name = Anrede; 
+    primaryKeyAttributes = (id); 
+    relationships = (
+        {
+            destination = Benutzer; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = anredeID; sourceAttribute = id; }); 
+            name = benutzers; 
+        }
+    ); 
+}

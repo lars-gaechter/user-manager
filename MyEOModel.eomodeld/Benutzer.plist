@@ -1,0 +1,49 @@
+{
+    attributes = (
+        {
+            columnName = admin; 
+            externalType = VARCHAR; 
+            name = admin; 
+            valueClassName = NSString; 
+            valueType = S; 
+            width = 5; 
+        }, 
+        {
+            className = "java.lang.Number"; 
+            columnName = anredeID; 
+            externalType = INT; 
+            name = anredeID; 
+            precision = 10; 
+            valueType = l; 
+        }, 
+        {columnName = benutzername; name = benutzername; prototypeName = varchar100; }, 
+        {
+            className = "java.lang.Number"; 
+            columnName = id; 
+            externalType = INT; 
+            name = id; 
+            precision = 10; 
+            valueType = l; 
+        }, 
+        {columnName = nachname; name = nachname; prototypeName = varchar100; }, 
+        {columnName = passwort; name = passwort; prototypeName = varchar100; }, 
+        {columnName = vorname; name = vorname; prototypeName = varchar100; }
+    ); 
+    attributesUsedForLocking = (admin, anredeID, benutzername, id, nachname, passwort, vorname); 
+    className = "com.webobjects.eocontrol.EOGenericRecord"; 
+    classProperties = (admin, anrede1, benutzername, nachname, passwort, vorname); 
+    externalName = benutzer; 
+    fetchSpecificationDictionary = {}; 
+    name = Benutzer; 
+    primaryKeyAttributes = (id); 
+    relationships = (
+        {
+            destination = Anrede; 
+            isMandatory = Y; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = id; sourceAttribute = anredeID; }); 
+            name = anrede1; 
+        }
+    ); 
+}

@@ -1,11 +1,14 @@
 package your.app;
 
 import java.util.Iterator;
+
+import com.webobjects.eocontrol.EOEditingContext;
 import com.webobjects.foundation.NSArray;
 import com.webobjects.foundation.NSMutableArray;
 
 import er.extensions.appserver.ERXApplication;
 import your.app.components.UserListPage;
+import your.app.eo._Benutzer;
 
 /**
  * 
