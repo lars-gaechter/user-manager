@@ -12,4 +12,9 @@ bin/
 #java
 *.class
 *.jar
+<<<<<<< HEAD
 /dist
+=======
+/dist
+/build/*
+>>>>>>> befor
