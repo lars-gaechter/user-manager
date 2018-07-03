@@ -12,3 +12,5 @@ bin/
 #java
 *.class
 *.jar
+/dist
+/build/*
